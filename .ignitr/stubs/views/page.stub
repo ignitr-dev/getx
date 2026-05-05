@@ -1,0 +1,25 @@
+part of "../{SNAKE_MODULE}.dart";
+
+class {PAGE}Page extends StatelessWidget {
+  {PAGE}Page({super.key});
+  
+  final controller = {CONTROLLER}Controller.instance;
+  
+  @override
+  Widget build(BuildContext context) {
+    return Obx(
+      () => MasterLayout(
+              title: "{MODULE}",
+              body: SafeArea(
+                child: controller.isBusy 
+                    ? Center(
+                        child: LoadingIcon(message: "Please wait..."),
+                      )
+                    :  Center(
+                      child: Text("Build awesome page here."),
+                    ),
+              ),
+            ),
+          );
+  }
+}

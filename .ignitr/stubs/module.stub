@@ -1,0 +1,11 @@
+import "package:flutter/material.dart";
+import "package:ignitr_template/app/modules/modules.dart";
+import "package:ignitr_template/app/shared/shared.dart";
+import "package:ignitr_template/system/system.dart";
+import "package:get/get.dart";
+
+part "controllers/{SNAKE_MODULE}_controller.dart";
+part "routes/{SNAKE_MODULE}_router.dart";
+part "networks/{SNAKE_MODULE}_client.dart";
+part "networks/api_{SNAKE_MODULE}_client.dart";
+part "views/{SNAKE_MODULE}_page.dart";

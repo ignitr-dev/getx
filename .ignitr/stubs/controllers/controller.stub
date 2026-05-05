@@ -1,0 +1,67 @@
+part of "../{SNAKE_MODULE}.dart";
+
+class {CONTROLLER}Controller extends AppController {
+  /// Create and get the instance of the controller
+  static {CONTROLLER}Controller get instance {
+    if (!Get.isRegistered<{CONTROLLER}Controller>()) Get.put({CONTROLLER}Controller());
+    return Get.find<{CONTROLLER}Controller>();
+  }
+
+  final _{CAMEL_MODULE}Client = {MODULE}Client.instance;
+  
+  List<{MODULE}Model> {PLURAL_MODULE} = [];
+
+  Future<void> index() async {
+    try {
+      setBusy(false);
+
+      final response = await _{CAMEL_MODULE}Client.index();
+
+      if (response.hasError) {
+        Toastr.of(Get.context!).error(message: "${response.message}");
+        setBusy(false);
+        return;
+      }
+
+      /// Set value to [{PLURAL_MODULE}]
+      {PLURAL_MODULE} = List<{MODULE}Model>.from(response.data.map((x) => {MODULE}Model.fromJson(x)));
+
+      setBusy(false);
+    } catch (e) {
+      print(e);
+      Toastr.error(message: "Something went wrong.");
+    }
+  }
+
+  Future<void> destroy({required int id}) async {
+    try {
+      /// Define API Client For This Method
+      String _client = '{PLURAL_MODULE}-delete';
+
+      /// Initialise the service
+      _{CAMEL_MODULE}Service.init(_client);
+
+      /// Call the API
+      ApiResponse response = await _{CAMEL_MODULE}Service.destroy(client: _client, id: id);
+
+      /// Check if the response has error
+      if (response.hasError()) {
+        /// Show error message
+        Toastr.error(message: "${response.message}");
+
+        /// Close the client
+        _{CAMEL_MODULE}Service.close(_client);
+        return;
+      }
+
+      /// Reload the data
+      await index(refresh: true);
+
+      /// Close the client
+      _{CAMEL_MODULE}Service.close(_client);
+    } catch (e) {
+      print(e);
+      Toastr.error(message: "Something went wrong.");
+    }
+  }
+}

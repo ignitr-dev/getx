@@ -1,0 +1,32 @@
+part of "models.dart";
+
+class {MODEL}Model extends Model {
+
+  {MODEL}Model({
+    this.id,
+  });
+  
+  int? id;
+
+  @override
+  {MODEL}Model copyWith({
+    int? id,
+  }) =>
+      {MODEL}Model(
+        id: id ?? this.id,
+      );
+
+  factory {MODEL}Model.fromJson(Map<String, dynamic> json) => {MODEL}Model(
+        id: json["id"],
+      );
+
+  @override
+  Map<String, dynamic> toJson() => {
+        "id": id,
+      };
+
+  @override
+  Map<String, dynamic> toRequestBody({Map<String, dynamic>? attributes}) {
+    throw UnimplementedError();
+  }
+}

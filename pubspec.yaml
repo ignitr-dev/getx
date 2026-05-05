@@ -1,0 +1,49 @@
+name: ignitr_template
+description: A flutter project starting point to get started with flutter
+  projects with ease and some awesome built in features.
+
+publish_to: "none"
+
+version: 0.1.1+1
+
+environment:
+  sdk: ^3.6.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # System
+  cupertino_icons: ^1.0.8
+  feather_icons: ^1.2.0
+  flutter_svg: ^2.0.17
+  get_storage: ^2.1.1
+  google_fonts: ^8.0.2
+  http: ^1.2.2
+  path_provider: ^2.1.5
+  recase: ^4.1.0
+  logger: any
+  flutter_local_notifications: ^21.0.0
+  firebase_core: ^4.7.0
+  firebase_messaging: ^16.2.0
+
+  get: ^4.6.6
+
+dev_dependencies:
+  flutter_lints: ^6.0.0
+  faker: ^2.1.0
+  flutter_launcher_icons: ^0.14.3
+  flutter_test:
+    sdk: flutter
+
+# Launcher Icon Configs
+flutter_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/icon/icon.png"
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
+    - assets/icons/

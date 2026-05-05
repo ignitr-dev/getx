@@ -1,0 +1,13 @@
+part of "../{SNAKE_MODULE}.dart";
+
+class {CONTROLLER}Controller extends AppController {
+  /// Create and get the instance of the controller
+  static {CONTROLLER}Controller get instance {
+    if (!Get.isRegistered<{CONTROLLER}Controller>()) Get.put({CONTROLLER}Controller());
+    return Get.find<{CONTROLLER}Controller>();
+  }
+
+  // final  _{CAMEL_MODULE}Client = {MODULE}Client.instance;
+
+  Future<void> index() async {}
+}
