@@ -1,22 +1,22 @@
 part of "models.dart";
 
-class {MODEL}Model extends Model {
+class {MODEL_CLASS} extends Model {
 
-  {MODEL}Model({
+  {MODEL_CLASS}({
     this.id,
   });
   
   int? id;
 
   @override
-  {MODEL}Model copyWith({
+  {MODEL_CLASS} copyWith({
     int? id,
   }) =>
-      {MODEL}Model(
+      {MODEL_CLASS}(
         id: id ?? this.id,
       );
 
-  factory {MODEL}Model.fromJson(Map<String, dynamic> json) => {MODEL}Model(
+  factory {MODEL_CLASS}.fromJson(Map<String, dynamic> json) => {MODEL_CLASS}(
         id: json["id"],
       );
 

@@ -1,9 +1,9 @@
 part of "../{SNAKE_MODULE}.dart";
 
 class {MODULE}Router {
-  static String get index => '/{MODULE_URL}/index';
+  static String get index => "/{MODULE_URL}/index";
 
-  List<GetPage> routes = [
-    GetPage(name: index, page: () => {MODULE}Page()),
+  static List<GetPage> routes = [
+    GetPage(name: index, page: () => {PAGE_CLASS}()),
   ];
 }

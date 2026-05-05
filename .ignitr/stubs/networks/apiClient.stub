@@ -2,31 +2,31 @@ part of "../{SNAKE_MODULE}.dart";
 
 class Api{MODULE}Client implements {MODULE}Client {
   @override
-  Future<ApiResponse<List<{MODULE}Model>>> index() {
+  Future<ApiResponse<List<{MODEL_CLASS}>>> index() {
     // TODO: implement index
     throw UnimplementedError();
   }
 
   @override
-  Future<ApiResponse<{MODULE}Model>> show(required int id}) {
+  Future<ApiResponse<{MODEL_CLASS}>> show({required int id}) {
     // TODO: implement show
     throw UnimplementedError();
   }
 
   @override
-  Future<ApiResponse<{MODULE}Model>> store(required Map<String, dynamic> data}) {
+  Future<ApiResponse<{MODEL_CLASS}>> store({required Map<String, dynamic> data}) {
     // TODO: implement store
     throw UnimplementedError();
   }
 
   @override
-  Future<ApiResponse<{MODULE}Model>> put(required int id, required Map<String, dynamic> data}) {
+  Future<ApiResponse<{MODEL_CLASS}>> put({required int id, required Map<String, dynamic> data,}) {
     // TODO: implement update
     throw UnimplementedError();
   }
 
   @override
-  Future<ApiResponse<dynamic>> destroy(required int id}) {
+  Future<ApiResponse<dynamic>> destroy({required int id}) {
     // TODO: implement destroy
     throw UnimplementedError();
   }

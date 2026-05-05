@@ -1,10 +1,10 @@
 part of "../{SNAKE_MODULE}.dart";
 
-class {CONTROLLER}Controller extends AppController {
+class {CONTROLLER_CLASS} extends AppController {
   /// Create and get the instance of the controller
-  static {CONTROLLER}Controller get instance {
-    if (!Get.isRegistered<{CONTROLLER}Controller>()) Get.put({CONTROLLER}Controller());
-    return Get.find<{CONTROLLER}Controller>();
+  static {CONTROLLER_CLASS} get instance {
+    if (!Get.isRegistered<{CONTROLLER_CLASS}>()) Get.put({CONTROLLER_CLASS}());
+    return Get.find<{CONTROLLER_CLASS}>();
   }
 
   // final  _{CAMEL_MODULE}Client = {MODULE}Client.instance;

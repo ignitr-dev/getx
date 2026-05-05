@@ -1,0 +1,20 @@
+part of "../{SNAKE_MODULE}.dart";
+
+abstract class {MODULE}Client {
+  /// Create and get the instance of [{MODULE}Client]
+  static {MODULE}Client get instance {
+    if (!Get.isRegistered<{MODULE}Client>()) {
+      Get.lazyPut<{MODULE}Client>(() {
+        return Api{MODULE}Client();
+      });
+    }
+
+    return Get.find<{MODULE}Client>();
+  }
+  
+  Future<ApiResponse<List<{MODEL_CLASS}>>> index();
+  Future<ApiResponse<{MODEL_CLASS}>> show({required int id});
+  Future<ApiResponse<{MODEL_CLASS}>> store({required Map<String, dynamic> data});
+  Future<ApiResponse<{MODEL_CLASS}>> put({required int id, required Map<String, dynamic> data,});
+  Future<ApiResponse<dynamic>> destroy({required int id});
+}

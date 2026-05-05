@@ -1,9 +1,9 @@
 part of "../{SNAKE_MODULE}.dart";
 
-class {PAGE}Page extends StatelessWidget {
-  {PAGE}Page({super.key});
+class {PAGE_CLASS} extends StatelessWidget {
+  {PAGE_CLASS}({super.key});
   
-  final controller = {CONTROLLER}Controller.instance;
+  final controller = {CONTROLLER_CLASS}.instance;
   
   @override
   Widget build(BuildContext context) {
@@ -13,7 +13,7 @@ class {PAGE}Page extends StatelessWidget {
               body: SafeArea(
                 child: controller.isBusy 
                     ? Center(
-                        child: LoadingIcon(message: "Please wait..."),
+                        child: LoadingIcon(),
                       )
                     :  Center(
                       child: Text("Build awesome page here."),
