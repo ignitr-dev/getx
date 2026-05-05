@@ -1,13 +1,17 @@
 part of "../../shared.dart";
 
-class ApiAuthSessionService extends BaseService implements AuthSessionService {
-  ApiAuthSessionService() {
+class ApiAuthSessionClient implements AuthSessionClient {
+  final api = ApiClient();
+
+  ApiAuthSessionClient() {
     getUser();
   }
 
   @override
   Future<ApiResponse<UserModel?>> getUser() async {
-    if (Storage.get<String>("token") != null) {
+    final authStore = AuthStore.instance;
+
+    if (authStore.token != null) {
       return await api.get<UserModel?>(
         "/profile",
         auth: true,

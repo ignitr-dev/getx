@@ -1,7 +1,12 @@
-part of "../../system.dart";
+part of "../../shared.dart";
 
 class ErrorPage extends StatelessWidget {
-  const ErrorPage({super.key, required this.message, this.action, this.actionLabel = "Retry"});
+  const ErrorPage({
+    super.key,
+    required this.message,
+    this.action,
+    this.actionLabel = "Retry",
+  });
 
   final String message;
   final VoidCallback? action;
@@ -18,25 +23,25 @@ class ErrorPage extends StatelessWidget {
           children: [
             Spacer(flex: 1),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 32.0),
+              padding: const EdgeInsets.symmetric(horizontal: kSpacer8),
               child: SvgPicture.asset(
                 assetIcon("server_error.svg"),
-                width: MediaQuery.of(context).size.width * 0.65,
+                width: Get.size.width * 0.65,
               ),
             ),
-            SizedBox(height: 24.0),
-            Text("Oops!", style: Theme.of(context).textTheme.displaySmall),
+            SizedBox(height: kSpacer6),
+            Text("Oops!", style: TextStyl.heading(context).sm.semibold),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 32.0).copyWith(top: 8.0),
+              padding: const EdgeInsets.symmetric(horizontal: kSpacer8).copyWith(top: kSpacer2),
               child: Text(
                 message,
-                style: Theme.of(context).textTheme.titleMedium,
+                style: TextStyl.body(context).md.regular,
                 textAlign: TextAlign.center,
               ),
             ),
             Spacer(flex: 1),
             SizedBox(
-              height: 50,
+              height: kSpacer12,
               child: Button.block(
                 key: UniqueKey(),
                 label: "Go Back",
@@ -44,7 +49,7 @@ class ErrorPage extends StatelessWidget {
                   Icons.arrow_back_rounded,
                   color: Colors.white,
                 ),
-                onTap: (_) => Navigator.pop(context),
+                onTap: (_) => Get.back(),
                 flat: true,
               ),
             ),

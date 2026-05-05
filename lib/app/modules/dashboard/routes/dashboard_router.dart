@@ -1,9 +1,9 @@
 part of "../dashboard.dart";
 
-class DashboardRoutes {
-  static String get dashboard => "/dashboard";
-}
+class DashboardRouter {
+  static String get index => "/dashboard";
 
-List<GetPage> dashboardRoutes = [
-  GetPage(name: "/dashboard", page: () => DashboardPage()),
-];
+  static List<GetPage> routes = [
+    GetPage(name: index, page: () => DashboardPage()),
+  ];
+}

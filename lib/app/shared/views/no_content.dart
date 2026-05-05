@@ -1,7 +1,14 @@
-part of "../system.dart";
+part of "../shared.dart";
 
 class NoContent extends StatelessWidget {
-  const NoContent({super.key, this.message = "No Data Yet!", this.action, this.showTitle = true, this.title = "Oops!", this.icon});
+  const NoContent({
+    super.key,
+    this.message = "No Data Yet!",
+    this.action,
+    this.showTitle = true,
+    this.title = "Oops!",
+    this.icon,
+  });
 
   final String message;
   final String title;
@@ -22,19 +29,23 @@ class NoContent extends StatelessWidget {
             icon != null
                 ? icon!
                 : Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 32.0),
+                    padding: const EdgeInsets.symmetric(horizontal: kSpacer8),
                     child: SvgPicture.asset(
                       assetIcon("not_found.svg"),
-                      width: MediaQuery.of(context).size.width * 0.65,
+                      width: Get.size.width * 0.65,
                     ),
                   ),
             const SizedBox(height: kSpacer),
-            if (showTitle) Text(title, style: Theme.of(context).textTheme.displaySmall),
+            if (showTitle)
+              Text(
+                title,
+                style: TextStyl.heading(context).md.semibold,
+              ),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 32.0).copyWith(top: 8.0),
+              padding: const EdgeInsets.symmetric(horizontal: kSpacer8).copyWith(top: kSpacer2),
               child: Text(
                 message,
-                style: Theme.of(context).textTheme.titleMedium,
+                style: TextStyl.body(context).md.regular,
                 textAlign: TextAlign.center,
               ),
             ),

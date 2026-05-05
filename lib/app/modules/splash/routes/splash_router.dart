@@ -1,13 +1,9 @@
 part of "../splash.dart";
 
-/// Defines the routes for the Splash module.
-class SplashRoutes {
-  static String get splash => "/splash";
-}
+class SplashRouter {
+  static String get index => "/splash/index";
 
-/// Defines the routes for the Splash module.
-/// This list of [GetPage] instances configures the routes
-/// that are available for the Splash module.
-List<GetPage> splashRoutes = [
-  GetPage(name: "/splash", page: () => SplashPage()),
-];
+  static List<GetPage> routes = [
+    GetPage(name: index, page: () => SplashPage()),
+  ];
+}

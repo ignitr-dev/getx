@@ -1,7 +1,12 @@
-part of "../../system.dart";
+part of "../../shared.dart";
 
 class NotFoundErrorPage extends StatelessWidget {
-  const NotFoundErrorPage({super.key, required this.message, this.action, this.actionLabel = "Retry"});
+  const NotFoundErrorPage({
+    super.key,
+    required this.message,
+    this.action,
+    this.actionLabel = "Retry",
+  });
 
   final String message;
   final VoidCallback? action;
@@ -16,36 +21,36 @@ class NotFoundErrorPage extends StatelessWidget {
         children: [
           Spacer(flex: 1),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 32.0),
+            padding: const EdgeInsets.symmetric(horizontal: kSpacer8),
             child: SvgPicture.asset(
               assetIcon("not_found.svg"),
-              width: MediaQuery.of(context).size.width * 0.65,
+              width: Get.size.width * 0.65,
             ),
           ),
-          SizedBox(height: 16.0),
-          Text("Oops!", style: Theme.of(context).textTheme.displaySmall),
+          SizedBox(height: kSpacer),
+          Text("Oops!", style: TextStyl.heading(context).sm.semibold),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 32.0).copyWith(top: 8.0),
+            padding: const EdgeInsets.symmetric(horizontal: kSpacer8).copyWith(top: 8.0),
             child: Text(
               message,
-              style: Theme.of(context).textTheme.titleMedium,
+              style: TextStyl.body(context).md.regular,
               textAlign: TextAlign.center,
             ),
           ),
           Spacer(flex: 1),
           action != null
               ? Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 32.0).copyWith(bottom: 32.0),
+                  padding: EdgeInsets.symmetric(horizontal: kSpacer8).copyWith(bottom: kSpacer8),
                   child: TextButton(
                     onPressed: action,
                     style: TextButton.styleFrom(
                       backgroundColor: Colors.grey[800],
-                      minimumSize: Size(MediaQuery.of(context).size.width, 40.0),
-                      padding: const EdgeInsets.symmetric(horizontal: 32.0),
+                      minimumSize: Size(Get.size.width, kSpacer10),
+                      padding: const EdgeInsets.symmetric(horizontal: kSpacer8),
                     ),
                     child: Text(
                       actionLabel,
-                      style: Theme.of(context).textTheme.labelLarge?.copyWith(color: Colors.white),
+                      style: TextStyl.label(context).md.semibold?.copyWith(color: Colors.white),
                     ),
                   ),
                 )

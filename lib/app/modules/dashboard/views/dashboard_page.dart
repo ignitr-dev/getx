@@ -2,7 +2,7 @@ part of "../dashboard.dart";
 
 class DashboardPage extends StatelessWidget {
   DashboardPage({super.key});
-  final DashboardController controller = DashboardController.instance;
+  final controller = DashboardController.instance;
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +12,7 @@ class DashboardPage extends StatelessWidget {
         actions: [
           IconButton(
             icon: Icon(Icons.settings),
-            onPressed: () => Get.toNamed(SettingsRoutes.settings),
+            onPressed: () => Get.toNamed(SettingsRouter.index),
           ),
         ],
         body: controller.isBusy

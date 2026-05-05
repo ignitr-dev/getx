@@ -5,6 +5,4 @@ import "package:get/get.dart";
 
 part "controllers/settings_controller.dart";
 part "routes/settings_router.dart";
-part "services/settings_service.dart";
-part "services/api_settings_service.dart";
 part "views/settings_page.dart";

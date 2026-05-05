@@ -1,9 +1,9 @@
 part of "../settings.dart";
 
-class SettingsRoutes {
-  static String get settings => "/settings";
-}
+class SettingsRouter {
+  static String get index => "/settings";
 
-List<GetPage> settingsRoutes = [
-  GetPage(name: "/settings", page: () => SettingsPage()),
-];
+  static List<GetPage> routes = [
+    GetPage(name: index, page: () => SettingsPage()),
+  ];
+}
