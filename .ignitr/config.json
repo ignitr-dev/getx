@@ -1,34 +1,5 @@
 {
   "version": "0.1.0",
   "stack": "getx",
-  "modules": [
-    {
-      "name": "Splash",
-      "slug": "splash",
-      "files": [
-        "app/modules/splash/controllers/splash_controller.dart",
-        "app/modules/splash/routes/splash_router.dart",
-        "app/modules/splash/views/splash_page.dart",
-        "app/modules/splash/splash.dart"
-      ]
-    },
-    {
-      "name": "Auth",
-      "slug": "auth"
-    },
-    {
-      "name": "Dashboard",
-      "slug": "dashboard",
-      "files": [
-        "app/modules/dashboard/controllers/dashboard_controller.dart",
-        "app/modules/dashboard/routes/dashboard_router.dart",
-        "app/modules/dashboard/views/dashboard_page.dart",
-        "app/modules/dashboard/dashboard.dart"
-      ]
-    },
-    {
-      "name": "Settings",
-      "slug": "settings"
-    }
-  ]
+  "project": "ignitr_template"
 }

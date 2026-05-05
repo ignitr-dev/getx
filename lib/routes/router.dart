@@ -6,4 +6,5 @@ List<GetPage> routes = [
   ...AuthRouter.routes,
   ...DashboardRouter.routes,
   ...SettingsRouter.routes,
+  //%...routes%//
 ];
