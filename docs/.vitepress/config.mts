@@ -10,6 +10,29 @@ export default defineConfig({
     lineNumbers: true,
     defaultHighlightLang: "dart",
   },
+  head: [
+    [
+      "link",
+      {
+        rel: "icon",
+        type: "image/x-icon",
+        href: "/images/favicon.png",
+      },
+    ],
+    // TODO: Update it configure google analytics
+    // [
+    //   "script",
+    //   {
+    //     async: "true",
+    //     src: "https://www.googletagmanager.com/gtag/js?id=G-GKNMVN5QK0",
+    //   },
+    // ],
+    // [
+    //   "script",
+    //   {},
+    //   "window.dataLayer = window.dataLayer || [];\nfunction gtag(){dataLayer.push(arguments);}\ngtag('js', new Date());\ngtag('config', 'G-GKNMVN5QK0');",
+    // ],
+  ],
   themeConfig: {
     logo: "/images/logo.png",
     search: {
