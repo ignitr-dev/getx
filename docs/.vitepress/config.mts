@@ -6,7 +6,6 @@ export default defineConfig({
   description: "Flutter Ignitr a mini flutter MVC framework",
   cleanUrls: true,
   srcDir: "./src",
-  base: "/getx/",
   markdown: {
     lineNumbers: true,
     defaultHighlightLang: "dart",
