@@ -19,19 +19,23 @@ export default defineConfig({
         href: "/images/favicon.png",
       },
     ],
-    // TODO: Update it configure google analytics
-    // [
-    //   "script",
-    //   {
-    //     async: "true",
-    //     src: "https://www.googletagmanager.com/gtag/js?id=G-GKNMVN5QK0",
-    //   },
-    // ],
-    // [
-    //   "script",
-    //   {},
-    //   "window.dataLayer = window.dataLayer || [];\nfunction gtag(){dataLayer.push(arguments);}\ngtag('js', new Date());\ngtag('config', 'G-GKNMVN5QK0');",
-    // ],
+    [
+      "script",
+      {
+        async: "true",
+        src: "https://www.googletagmanager.com/gtag/js?id=G-HLWB1166W9",
+      },
+    ],
+    [
+      "script",
+      {},
+      [
+        "window.dataLayer = window.dataLayer || [];",
+        "function gtag(){dataLayer.push(arguments);}",
+        "gtag('js', new Date());",
+        "gtag('config', 'G-HLWB1166W9');",
+      ].join("\n"),
+    ],
   ],
   themeConfig: {
     logo: "/images/logo.png",
