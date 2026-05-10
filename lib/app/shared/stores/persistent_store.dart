@@ -13,7 +13,7 @@ abstract class PersistentStore<T> extends Store<T> {
 
   void _load() {
     try {
-      final stored = Storage.get<String>(storageKey);
+      final stored = Storage.get(storageKey);
 
       if (stored != null) {
         value = fromStorage(stored);

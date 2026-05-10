@@ -16,6 +16,11 @@ void main() async {
 
   await GetStorage.init();
 
+  // Enable below code to allow notifications
+
+  // final notificationService = NotificationService();
+  // notificationService.init();
+
   /// Set and lock device Orientation
   // SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
   runApp(App());
