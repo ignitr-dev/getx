@@ -1,0 +1,15 @@
+{
+  "name": "Splash",
+  "slug": "splash",
+  "type": "system",
+  "path": "lib/app/modules/splash",
+
+  "layers": {
+    "controllers": ["controllers/splash_controller.dart"],
+    "networks": [],
+    "routes": ["routes/splash_router.dart"],
+    "views": ["views/splash_page.dart"]
+  },
+
+  "entry": "splash_module.dart"
+}

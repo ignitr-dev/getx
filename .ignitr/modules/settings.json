@@ -1,0 +1,18 @@
+{
+  "name": "Settings",
+  "slug": "settings",
+  "type": "system",
+  "path": "lib/app/modules/settings",
+
+  "layers": {
+    "controllers": ["controllers/settings_controller.dart"],
+    "networks": [
+      "networks/api_settings_client.dart",
+      "networks/settings_client.dart"
+    ],
+    "routes": ["routes/settings_router.dart"],
+    "views": ["views/settings_page.dart"]
+  },
+
+  "entry": "settings_module.dart"
+}
