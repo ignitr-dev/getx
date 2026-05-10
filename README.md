@@ -66,7 +66,7 @@ This will generate all the files required for a `Module`
 │   └── 📄 blog_controller.dart
 ├── 📂 routes
 │   ├── 📄 blog_router.dart
-├── 📂 networds
+├── 📂 networks
 │   ├── 📄 api_blog_client.dart
 │   └── 📄 blog_client.dart
 ├── 📂 views
