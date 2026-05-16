@@ -11,5 +11,5 @@
     "views": ["views/splash_page.dart"]
   },
 
-  "entry": "splash_module.dart"
+  "entry": "splash.dart"
 }

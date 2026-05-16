@@ -14,5 +14,5 @@
     "views": ["views/dashboard_page.dart"]
   },
 
-  "entry": "dashboard_module.dart"
+  "entry": "dashboard.dart"
 }

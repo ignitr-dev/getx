@@ -1,17 +1,22 @@
 part of "../system.dart";
 
+/// Retuns full asset image path
 String image(String name) {
   return "assets/images/$name";
 }
 
+/// Retuns full asset icon path
 String assetIcon(String name) {
   return "assets/icons/$name";
 }
 
+/// PrettyLogger to log something with
+/// formatted and colored text
 var log = Logger(
   printer: PrettyPrinter(),
 );
 
+/// Generates & returns [MaterialColor] from [Color]
 MaterialColor generateMaterialColor(Color color) {
   int argbValue = (color.a * 255).toInt() << 24 | color.r.toInt() << 16 | color.g.toInt() << 8 | color.b.toInt();
 
@@ -42,10 +47,14 @@ Color _shadeColor(Color color, double factor) => Color.fromRGBO(
       1,
     );
 
+/// Converts decimal value to alpha value
+///
+/// Generally used for [Color]
 int alpha(double opacity) {
   return (255 * opacity).toInt();
 }
 
+/// Returns contrast [Color] for provided [Color]
 Color getContrastColor(Color color) {
   int d = 0;
 
@@ -59,3 +68,6 @@ Color getContrastColor(Color color) {
 
   return Color.fromARGB(color.a.toInt() * 255, d, d, d);
 }
+
+/// Created an [Str] instance
+Str str(String text) => Str(text);

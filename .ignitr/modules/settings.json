@@ -14,5 +14,5 @@
     "views": ["views/settings_page.dart"]
   },
 
-  "entry": "settings_module.dart"
+  "entry": "settings.dart"
 }
